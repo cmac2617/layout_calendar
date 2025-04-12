@@ -17,7 +17,7 @@ $days: (
 // Specifying left margin for initial calendar day, depending on which day of the week the month starts on.
 
 @each $day, $margin in $days {
-  .calendar__day--start-#{$day} {
+  .calendar--start-day-#{$day} > .calendar__day:first-child {
     margin-left: #{$margin};
   }
 }
@@ -33,7 +33,7 @@ $days: (
 // Specifying which days should not be included in the calendar, depending on the length of the month
 
 @for $i from 28 through 31 {
-  .calendar-day--month-#{$i} {
+  .calendar--month-length-#{$i} {
     .calendar__day:nth-child(n + #{$i + 1}) {
       display: none;
     }
