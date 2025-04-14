@@ -2,16 +2,20 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 $days: (
   'mon': '0px',
-  'tue': '102px',
-  'wed': '204px',
-  'thr': '306px',
-  'fri': '408px',
-  'sat': '510px',
-  'sun': '612px',
+  'tue': '101px',
+  'wed': '202px',
+  'thr': '303px',
+  'fri': '404px',
+  'sat': '505px',
+  'sun': '606px',
 );
 
 // Specifying left margin for initial calendar day, depending on which day of the week the month starts on.
@@ -41,11 +45,10 @@ $days: (
 }
 
 .calendar {
-  width: 726px;
+  width: 706px;
   display: flex;
   flex-flow: row wrap;
   gap: 1px;
-  padding: 0 10px;
 }
 
 .calendar__day {
@@ -55,6 +58,10 @@ $days: (
   background-color: #eee;
   line-height: 100px;
   text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     background-color: #ffbfcb;
